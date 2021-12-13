@@ -1,0 +1,58 @@
+package lab21;
+import java.util.*;
+class Employee
+{
+	float netsalary,da,hr,salary;
+	void display()
+	{
+		System.out.println("Name of the Class is Employee");
+	}
+	void calsalary()
+	{
+		netsalary=salary+(salary*da/100)+(salary*hr/100);
+		System.out.println("The gross salary employee is ="+netsalary);
+	}
+	
+}
+class Engineer extends Employee
+{
+	void display()
+	{
+		super.display();
+		
+	}
+	
+	void calsalary()
+	{
+		super.calsalary();
+		float netsalar=netsalary*2;
+		System.out.println("Name of the Class is Engineer");
+		System.out.println("The gross salary engineer is ="+netsalar);
+	}
+	
+}
+
+
+public class eng {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner (System.in);
+		//Employee c = new Employee();
+		Engineer e = new Engineer();
+		System.out.println("Enter the salaryof employee ");
+		e.salary=sc.nextInt();
+		System.out.println("Enter the DA of employee ");
+		e.da=sc.nextInt();
+		System.out.println("Enter the HAR of employee ");
+		e.hr=sc.nextInt();
+		/*e.display();
+		e.calsalary();*/
+		e.display();
+		e.calsalary();
+		sc.close();
+		
+	}
+
+}
