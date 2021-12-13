@@ -1,0 +1,42 @@
+package lab21;
+import java.util.*;
+abstract class sides
+{
+	abstract void side();
+}
+class rectangle extends sides
+{
+	void side()
+	{
+		System.out.println("I AM RECTANGLE , I HAVE 4 SIDES");
+	}
+}
+class triangle extends sides
+{
+	void side()
+	{
+		System.out.println("I AM TRIANGLE , I HAVE 3 SIDES");
+	}
+}
+class hexagon extends sides
+{
+	void side()
+	{
+		System.out.println("I AM HEXAGON , I HAVE 6 SIDES");
+	}
+}
+
+public class abs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		rectangle obj = new  rectangle();
+		obj.side();
+		triangle obj1 = new  triangle();
+		obj1.side();
+		hexagon obj2 = new  hexagon();
+		obj2.side();
+	}
+
+}
